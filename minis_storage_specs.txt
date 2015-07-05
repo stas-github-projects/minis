@@ -1,0 +1,37 @@
+[global_header] //38 + 10 bytes
+
+version = 7 //byte array
+key_name_max_len = 1 //byte
+keys_page_size = 2 //ushort
+keys_page_last_pos = 8 //long
+keys_page_freecells = 2; //ushort
+keys_query_char = 1 //Encoding.ASCII
+keys_delimeter_char = 1 //Encoding.ASCII
+unique_key_id = 8 //ulong
+created_at = 8 //long
+
+
+[keys_page] // bytes
+
+keys_page_header = 8 //long
+
+[key] //48 bytes + keys_name_max_len
+active/blocked = 1 //byte
+type = 1 //byte
+parent_id = 8 //ulong
+this_id = 8 //ulong
+created_at = 8 //long
+value_pos = 8 //long
+value_len = 4 //int
+link_to_len = 2 //ushort
+link_to_pos = 8 //long
+//store link as queue of long (8) numbers, which are keys's hashes
+//if link have been deleted - just fill it's value with nulls
+
+
+
+[value]
+
+value = 'value_len' //bytes
+
+//if new value length (when UPDATE) less or equal than the exising value - just replace the value and change it's value it 'key' section, if new length is more than previous - than mark existing value section as 'blocked' and add value in the end of the file, then change the value pos and value length in 'key' section

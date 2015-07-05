@@ -1,0 +1,6 @@
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\bin\Debug\MiniS.exe.config
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\bin\Debug\MiniS.exe
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\bin\Debug\MiniS.pdb
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\obj\Debug\MiniS.csprojResolveAssemblyReference.cache
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\obj\Debug\MiniS.exe
+E:\!_Csharp_projects\Projects_desktop\MiniS\MiniS\obj\Debug\MiniS.pdb
